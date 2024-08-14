@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Management system</title>
+
+    <style type="text/css">
+  @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+body {
+  background-image: url('static/background.jpg');
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: blur(0px);
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+form .btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
+  text-align: center;
+  background-color: #47AB11;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  font-size: 15px;
+}
+
+p1 {        background-color: pink;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 1.2;
+            word-spacing: 6px;
+        }
+
+
+     </style>
+</head>
+<body>
+
+<div id="bg"></div>
+
+<h1>Blood Bank Management system</h1>
+<ul>
+
+  <li><a href="/login">Login</a></li>
+</ul>
+<br>
+<form id="form" method="POST" >
+    <select name="search">
+        <option>Select</option>
+        <option>A+ve</option>
+        <option>A-ve</option>
+        <option>B+ve</option>
+        <option>B-ve</option>
+        <option>O+ve</option>
+        <option>O-ve</option>
+        <option>AB+ve</option>
+        <option>AB-ve</option>
+    </select>
+
+    <button class="btn" type="submit">Search</button>
+  </form>
+<br>
+<br>
+
+<p>
+    <h1 style="color:Tomato;"><center>Objective</center></h1>
+    <p1>The main objective of the Blood Bank Management System is to manage the details of Blood, Donor, Blood Group, Blood Bank, Stock.
+    It manages all the information about Blood, Blood Cell, Stock, Blood.
+    The system can handle the information of blood bags, donors, recipients, and transactions in a blood bank.
+    It can assist the blood test results, the quality of blood, the availability of blood, and the distribution of blood.
+    It can also provide online storage, updation, and retrieval facility.
+    It can reduce paperwork and save time. </p1>
+</p>
+</body>
+</html>

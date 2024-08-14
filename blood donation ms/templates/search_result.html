@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>result</title>
+    <style type="text/css">
+    body {
+            background-image: linear-gradient(to right, #ee8db2, #d4aaf8, #a9f3f3, #a9f3b5);
+        }
+
+    table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  border-spacing: 30px;
+}
+th, td {
+  padding: 15px;
+}
+th {
+  text-align: center;
+}
+td {
+  text-align: center;
+}
+
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+form .btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
+  text-align: center;
+  background-color: #47AB11;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  font-size: 15px;
+}
+   ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+<body>
+    <br><br>
+    <center>
+
+    <form id="form" method="POST" action="/">
+    <select name="search">
+        <option>Select</option>
+        <option>A+ve</option>
+        <option>A-ve</option>
+        <option>B+ve</option>
+        <option>B-ve</option>
+        <option>O+ve</option>
+        <option>O-ve</option>
+        <option>AB+ve</option>
+        <option>AB-ve</option>
+    </select>
+
+    <button class="btn" type="submit">Search</button>
+  </form>
+<br>
+        <br>
+</center>
+  <table class = "table table-hover" style="width:100%">
+      <caption><b>Blood Bank Management</b></caption>
+
+      <thead>
+         <tr>
+             <th>Unit ID</th>
+             <th>Name</th>
+             <th>Age</th>
+             <th>Gender</th>
+             <th>Phone Number</th>
+             <th>Blood Type</th>
+            <th>Storage Location</th>
+             <th>Creation date</th>
+             <th>Expiration date</th>
+         </tr>
+      </thead>
+
+      <tbody>
+        {% for thing in output%}
+        <tr>
+          <td>{{thing["unitid"]}}</td>
+          <td>{{thing["name"]}}</td>
+          <td>{{thing["age"]}}</td>
+          <td>{{thing["Gender"]}}</td>
+          <td>{{thing["number"]}}</td>
+          <td>{{thing["blood"]}}</td>
+          <td>{{thing["storage"]}}</td>
+          <td>{{thing["creationdate"]}}</td>
+          <td>{{thing["expirationdate"]}}</td>
+       </tr>
+        {%endfor%}
+
+      </tbody>
+  </table>
+
+<ul>
+  <li><a href="/">Home</a></li>
+</ul>
+</body>
+</html>
